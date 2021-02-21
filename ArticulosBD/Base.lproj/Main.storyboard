@@ -38,6 +38,9 @@
                                         <state key="normal" title="Añadir">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAñadirPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3C-sU-lyq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -51,6 +54,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Wz-zs-DOp"/>
+                    <connections>
+                        <outlet property="txtNombre" destination="8LU-jK-bjo" id="PC1-uA-0nt"/>
+                        <outlet property="txtUnidades" destination="8qr-El-nmE" id="L7k-RX-MSz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
