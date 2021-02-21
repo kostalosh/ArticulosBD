@@ -7,11 +7,13 @@
 
 import UIKit
 import FirebaseAnalytics
-import Firebase
+import FirebaseFirestore
 
 class ViewController: UIViewController {
     @IBOutlet weak var txtNombre: UITextField!
     @IBOutlet weak var txtUnidades: UITextField!
+    
+    private let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnAñadirPressed(_ sender: Any) {
+        
         view.endEditing(true)
+        
+        db.collection("articulos").document(txtNombre.text!).setData([
+        "nombre":txtNombre.text!,
+        "unidades":txtUnidades.text!])
     }
     
 }
